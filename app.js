@@ -1,6 +1,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.0.0/fabric.min.js"></script>
 
-var canvas = new fabric.Canvas('my_canvas');
+var canvas = new fabric.Canvas('canvas');
 
 // create a rectangle object
 var rect = new fabric.Rect({
