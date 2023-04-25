@@ -95,4 +95,43 @@ function draw4(e){
     ctx.lineTo(mousePos.x,mousePos.y);
     ctx.stroke();
 }
+function draw5(e){
+    window.removeEventListener('mousemove',draw1);
+    window.removeEventListener('mousemove',draw2);
+    window.removeEventListener('mousemove',draw3);
+    window.removeEventListener('mousemove',draw4);
+    window.addEventListener('mousemove',draw5);
+    
+    if(e.buttons !== 1)
+        return;
+    ctx.beginPath(); 
+    ctx.lineCap = 'round';
+    var x = e.offsetX==undefined?e.layerX:e.offsetX;
+    var y = e.offsetY==undefined?e.layerY:e.offsetY;
+    ctx.fillRect(x, y, 100, 100);
+    ctx.lineWidth = 10;
+    ctx.moveTo(mousePos.x,mousePos.y);
+    mousePosition(e);
+    ctx.stroke();
+}
+function draw6(e){
+    window.removeEventListener('mousemove',draw1);
+    window.removeEventListener('mousemove',draw2);
+    window.removeEventListener('mousemove',draw3);
+    window.removeEventListener('mousemove',draw4);
+    window.addEventListener('mousemove',draw5);
+    
+    if(e.buttons !== 1)
+        return;
+    ctx.beginPath(); 
+    ctx.lineCap = 'round';
+    var x = e.offsetX==undefined?e.layerX:e.offsetX;
+    var y = e.offsetY==undefined?e.layerY:e.offsetY;
+    ctx.fillRect(x, y, 50, 50);
+    ctx.lineWidth = 10;
+    ctx.moveTo(mousePos.x,mousePos.y);
+    mousePosition(e);
+    ctx.stroke();
+}
+
 
