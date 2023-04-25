@@ -40,7 +40,7 @@ function draw4(){
     canvas.isDrawingMode = false; 
     var circle = new fabric.Circle({
         radius: 150,
-        fill: color,
+        fill: "#FFFF00",
         left: 800,
         top: 300
         
