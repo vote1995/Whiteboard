@@ -18,6 +18,21 @@ button{
 
 }
 
+:root {
+    --bg-color: #303030;
+    --text-color: #bbbbbb;
+
+}
+
+body {
+    font-family: 'Bruno Ace', cursive;
+    font-size: 18px;
+}
+
+.Mcanvas {
+    border: 1px solid #000000;
+}
+
 button:active{
     transform: scale(0.95);
 } 
