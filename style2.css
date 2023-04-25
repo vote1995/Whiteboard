@@ -28,7 +28,7 @@ button:active{
     
     background-color: black;
     position: fixed;
-    left: 350px;
+    left: 305px;
     top:50px;
 }
 .button2{
@@ -48,7 +48,7 @@ button:active{
     font-size: 1.3rem;
     background-color: black;
     position: fixed;
-    left: 700px;
+    left: 610px;
     top:50px;;
 }
 .button3{
@@ -68,7 +68,7 @@ button:active{
     font-size: 1.3rem;
     background-color: #FF0000;
     position: fixed;
-    left: 1050px;
+    left: 915px;
     top:50px;;
 }
 .button4{
@@ -88,7 +88,7 @@ button:active{
     font-size: 1.3rem;
     background-color: #FFFF00;
     position: fixed;
-    left: 1400px;
+    left: 1220px;
     top:50px;
 }
 .button5{
@@ -108,6 +108,26 @@ button:active{
     font-size: 1.3rem;
     background-color: #000000;
     position: fixed;
-    left: 1750px;
+    left: 1525px;
     top:50px;
 }
+.button6{
+    border: 4px solid #fff;
+    border-radius: 120px;
+    overflow: hidden;
+    display: absolute;
+    float:left;
+    width: 300px;
+    height: 80px;
+    line-height: 68px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    text-align: center;
+    font-size: 1.3rem;
+    background-color: #000000;
+    position: fixed;
+    top:150px;
+}
+

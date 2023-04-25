@@ -4,12 +4,24 @@ canvas.setWidth(window.innerWidth);
 const ctx = document.getElementById('canvas').getContext('2d');
 window.addEventListener('resize',resize);
 resize();
-
+let colorInput = document.querySelector('#color');
+    colorInput.addEventListener('input', () =>{ 
+    var brush = colorInput.value;
+    canvas.freeDrawingBrush.color = brush;
+});
+    let slider = document.getElementById("range");
+    slider.addEventListener('input', () =>{ 
+    var slid = slider.value;
+    canvas.freeDrawingBrush.width = slid;
+});
+//มีปัญหาตรงปรับขนาดตัวอักษรนิดหน่อย
 function resize(){
     canvas.clear()
 }
 function draw1(){
     canvas.isDrawingMode = true; 
+    canvas.freeDrawingBrush.width = 10;
+    canvas.freeDrawingBrush.color = "black";
 }
 function draw2(){
     canvas.isDrawingMode = false; 
@@ -23,44 +35,38 @@ function draw3(){
     brush = "#FFFFFF";
     canvas.freeDrawingBrush.width = 100;
     canvas.freeDrawingBrush.color = brush;
-
 }
-var vLinePatternBrush = new fabric.PatternBrush(canvas);
-    vLinePatternBrush.getPatternSrc = function() {
-
-      var patternCanvas = fabric.document.createElement('canvas');
-      patternCanvas.width = patternCanvas.height = 10;
-      var ctx = patternCanvas.getContext('2d');
-
-      ctx.strokeStyle = this.color;
-      ctx.lineWidth = 5;
-      ctx.beginPath();
-      ctx.moveTo(0, 5);
-      ctx.lineTo(10, 5);
-      ctx.closePath();
-      ctx.stroke();
-
-      return patternCanvas;
-    };
-
-    var hLinePatternBrush = new fabric.PatternBrush(canvas);
-    hLinePatternBrush.getPatternSrc = function() {
-
-      var patternCanvas = fabric.document.createElement('canvas');
-      patternCanvas.width = patternCanvas.height = 10;
-      var ctx = patternCanvas.getContext('2d');
-
-      ctx.strokeStyle = this.color;
-      ctx.lineWidth = 5;
-      ctx.beginPath();
-      ctx.moveTo(5, 0);
-      ctx.lineTo(5, 10);
-      ctx.closePath();
-      ctx.stroke();
-
-      return patternCanvas;
-    };
+function draw4(){
+    canvas.isDrawingMode = false; 
+    var circle = new fabric.Circle({
+        radius: 150,
+        fill: color,
+        left: 800,
+        top: 300
+        
+    });
+    canvas.add(circle);
+}
+    canvas.add(circle);
+function draw5(){
+    canvas.isDrawingMode = false; 
+    var triangle = new fabric.Triangle({
+        width: 300,
+        height: 300,
+        fill: color,
+        left: 800,
+        top: 300
+    });
+    canvas.add(triangle);
+}
+function draw6(){
+    canvas.isDrawingMode = true;
+    var high = canvas.freeDrawingBrush;
+    high = "#FF0000";
+    canvas.freeDrawingBrush.width = 50;
+    canvas.freeDrawingBrush.color = high+80;
+}
 
 
-
+    
 
