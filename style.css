@@ -1,19 +1,61 @@
 button{
-    position: absolute;
-    top: 10px;
-    left: 1000x;
-    padding: 10px 40px;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 0 15px #303030;
-    background: #303030;
+    border: 4px solid #fff;
+    border-radius: 120px;
+    overflow: hidden;
+    display: absolute;
+    float:left;
+    width: 300px;
+    height: 80px;
+    line-height: 68px;
+    text-transform: uppercase;
+    text-decoration: none;
     color: #fff;
-    cursor: pointer;
-    font: 1.2em 'consolas';
-    transition: transform 300ms ease;
-    z-index: 2;
+    letter-spacing: 0.1em;
+    text-align: center;
+    font-size: 1.3rem;
+    background-color: black;
+    position: fixed;
+
 }
 
 button:active{
     transform: scale(0.95);
 } 
+.button1{
+    border: 4px solid #fff;
+    border-radius: 120px;
+    overflow: hidden;
+    display: absolute;
+    float:left;
+    width: 300px;
+    height: 80px;
+    line-height: 68px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 0.1em;
+    text-align: center;
+    font-size: 1.3rem;
+    background-color: black;
+    position: fixed;
+    left: 300px;
+}
+.button2{
+    border: 4px solid #fff;
+    border-radius: 120px;
+    overflow: hidden;
+    display: absolute;
+    float:left;
+    width: 300px;
+    height: 80px;
+    line-height: 68px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 0.1em;
+    text-align: center;
+    font-size: 1.3rem;
+    background-color: black;
+    position: fixed;
+    left: 600px;
+}
