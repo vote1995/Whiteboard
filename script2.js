@@ -10,12 +10,13 @@ resize();
     canvas.freeDrawingBrush.color = brush;
 });
     let slider = document.getElementById("range");
-    slider.addEventListener('input', () =>{ 
+    slider.addEventListener('input',()=>{ 
     var slid = slider.value;
     canvas.freeDrawingBrush.width = slid;
 });
-//มีปัญหาตรงปรับขนาดตัวอักษรนิดหน่อย
+
 function resize(){
+    canvas.isDrawingMode = false; 
     canvas.clear()
 }
 function draw1(){
@@ -66,7 +67,12 @@ function draw6(){
     colorInput.addEventListener('input', () =>{ 
     var brush = colorInput.value;
     canvas.freeDrawingBrush.color = brush+80;
+
 });
+}
+
+function draw7(){
+    canvas.isDrawingMode = false;
 }
 
 
