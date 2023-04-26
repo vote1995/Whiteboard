@@ -4,6 +4,7 @@ canvas.setWidth(window.innerWidth);
 const ctx = document.getElementById('canvas').getContext('2d');
 window.addEventListener('resize',resize);
 resize();
+canvas.freeDrawingBrush.width = 10;
     let colorInput = document.querySelector('#color');
     colorInput.addEventListener('input', () =>{ 
     var brush = colorInput.value;
@@ -16,13 +17,26 @@ resize();
 });
 
 function resize(){
-    canvas.isDrawingMode = false; 
+    canvas.isDrawingMode = true; 
+    let slider = document.getElementById("range");
+    slider.addEventListener('input',()=>{ 
+    var slid = slider.value;
+    canvas.freeDrawingBrush.width = slid;
+});
     canvas.clear()
 }
 function draw1(){
     canvas.isDrawingMode = true; 
-    canvas.freeDrawingBrush.width = 10;
-    canvas.freeDrawingBrush.color = "black";
+    let slider = document.getElementById("range");
+    slider.addEventListener('input',()=>{ 
+    var slid = slider.value;
+    canvas.freeDrawingBrush.width = slid;
+});
+    let colorInput = document.querySelector('#color');
+    colorInput.addEventListener('input', () =>{ 
+    var brush = colorInput.value;
+    canvas.freeDrawingBrush.color = brush;
+});
 }
 function draw2(){
     canvas.isDrawingMode = false; 
