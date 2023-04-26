@@ -18,14 +18,23 @@ canvas.freeDrawingBrush.width = 10;
 
 function resize(){
     canvas.isDrawingMode = true; 
+    canvas.freeDrawingBrush.color = "black";
+    canvas.freeDrawingBrush.width = 10;
+    canvas.clear()
     let slider = document.getElementById("range");
     slider.addEventListener('input',()=>{ 
     var slid = slider.value;
     canvas.freeDrawingBrush.width = slid;
 });
-    canvas.clear()
+    let colorInput = document.querySelector('#color');
+    colorInput.addEventListener('input', () =>{ 
+    var brush = colorInput.value;
+    canvas.freeDrawingBrush.color = brush;
+});
 }
 function draw1(){
+    canvas.freeDrawingBrush.color = "black";
+    canvas.freeDrawingBrush.width = 10;
     canvas.isDrawingMode = true; 
     let slider = document.getElementById("range");
     slider.addEventListener('input',()=>{ 
