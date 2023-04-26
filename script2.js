@@ -4,7 +4,7 @@ canvas.setWidth(window.innerWidth);
 const ctx = document.getElementById('canvas').getContext('2d');
 window.addEventListener('resize',resize);
 resize();
-let colorInput = document.querySelector('#color');
+    let colorInput = document.querySelector('#color');
     colorInput.addEventListener('input', () =>{ 
     var brush = colorInput.value;
     canvas.freeDrawingBrush.color = brush;
@@ -61,10 +61,12 @@ function draw5(){
 }
 function draw6(){
     canvas.isDrawingMode = true;
-    var high = canvas.freeDrawingBrush;
-    high = "#FF0000";
     canvas.freeDrawingBrush.width = 50;
-    canvas.freeDrawingBrush.color = high+80;
+    let colorInput = document.querySelector('#color');
+    colorInput.addEventListener('input', () =>{ 
+    var brush = colorInput.value;
+    canvas.freeDrawingBrush.color = brush+80;
+});
 }
 
 
