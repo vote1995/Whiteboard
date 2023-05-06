@@ -7,7 +7,6 @@ body {
 }
 .frame {
     display: grid;
-    background: red;
     grid-template-columns: auto 2fr;  /* เพิ่ม 1fr ด้านหน้าและด้านหลังเพื่อให้ grid ซ้ายและ grid ขวาเท่ากัน */
     grid-auto-rows: 100vh;
     grid-template-areas: 
@@ -15,9 +14,10 @@ body {
   }
   
   .leftframe {
-    width: 50px;
+    width: 100%; /* 50px/9 */
+    height: 100%;
     grid-area: left;
-    background: green;
+    background: #1348bb;
   }
   .leftframe ul li{
     width: 20px;
@@ -90,32 +90,166 @@ body {
 /* -------------- button design ------------------- */
 
 .btn-pen {
-  cursor: pointer;
-  padding: 15px;
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 17px 30px;
+    border: 0;
+    color: #fff;
+    font-size: 17.5px;
+    border: 2px solid transparent;
+    border-color: #000;
+    color: #000;
+    background: transparent;
+    font-weight: 800;
+    line-height: 30px;
+    transition: background,color .1s ease-in-out;
 }
+
+.btn-pen:hover {
+    background-color: #000;
+    color: #fff;
+}
+
 .btn-eraser {
-  cursor: pointer;
-  padding: 15px;
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 17px 30px;
+    border: 0;
+    color: #fff;
+    font-size: 17.5px;
+    border: 2px solid transparent;
+    border-color: #000;
+    color: #000;
+    background: transparent;
+    font-weight: 800;
+    line-height: 30px;
+    transition: background,color .1s ease-in-out;
 }
+
+.btn-eraser:hover {
+  color: #fff;
+  background-color: #000;
+}
+
 .btn-highlight {
-  cursor: pointer;
-  padding: 15px;
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    padding: 17px 30px;
+    border: 0;
+    color: #fff;
+    font-size: 17.5px;
+    border: 2px solid transparent;
+    border-color: #000;
+    color: #000;
+    background: transparent;
+    font-weight: 800;
+    line-height: 30px;
+    transition: background,color .1s ease-in-out;
 }
+
+.btn-highlight:hover {
+  color: #fff;
+  background: #000;
+}
+
 .btn-shapes {
+  display: inline-block;
+  outline: 0;
+  text-align: center;
   cursor: pointer;
-  padding: 15px;
+  padding: 17px 30px;
+  border: 0;
+  color: #fff;
+  font-size: 17.5px;
+  border: 2px solid transparent;
+  border-color: #000;
+  color: #000;
+  background: transparent;
+  font-weight: 800;
+  line-height: 30px;
+  transition: background,color .1s ease-in-out;
 }
+
+.btn-shapes:hover {
+  color: #fff;
+  background: #000;
+}
+
 .btn-square {
+  display: inline-block;
+  outline: 0;
+  text-align: center;
   cursor: pointer;
-  padding: 16.5px;
+  padding: 17px 30px;
+  border: 0;
+  color: #fff;
+  font-size: 17.5px;
+  border: 2px solid transparent;
+  border-color: #000;
+  color: #000;
+  background: transparent;
+  font-weight: 800;
+  line-height: 30px;
+  transition: background,color .1s ease-in-out;
 }
+
+.btn-square:hover {
+  color: #fff;
+  background: #000;
+}
+
 .btn-triangle {
+  display: inline-block;
+  outline: 0;
+  text-align: center;
   cursor: pointer;
-  padding: 15px;
+  padding: 17px 30px;
+  border: 0;
+  color: #fff;
+  font-size: 17.5px;
+  border: 2px solid transparent;
+  border-color: #000;
+  color: #000;
+  background: transparent;
+  font-weight: 800;
+  line-height: 30px;
+  transition: background,color .1s ease-in-out;
 }
+
+.btn-triangle:hover {
+  color: #fff;
+  background: #000;
+}
+
 .btn-circle {
+  display: inline-block;
+  outline: 0;
+  text-align: center;
   cursor: pointer;
-  padding: 15px;
+  padding: 17px 30px;
+  border: 0;
+  color: #fff;
+  font-size: 17.5px;
+  border: 2px solid transparent;
+  border-color: #000;
+  color: #000;
+  background: transparent;
+  font-weight: 800;
+  line-height: 30px;
+  transition: background,color .1s ease-in-out;
+}
+.btn-circle:hover {
+  color: #fff;
+  background: #000;
+}
+.btn-clear img {
+  width: 30px;
 }
 /* col buttom -------------------------------*/
 .col-black {
@@ -176,10 +310,10 @@ body {
   position: absolute;
   top: 23%; 
   left: 2%; 
-  width: 2.5vw;
+  width: 3vw;
   z-index: 1;
   height: 30%;
-  background: #333;
+  background: #09205f;
   transform: scale(0);
   transform: translate(-50%, -50%);
   display: none;
@@ -187,10 +321,10 @@ body {
 
 .box-col {
   top: 25%;
-  left: 5.8%;
+  left: 7%;
   position: absolute;
-  background: #b8b8b8;
-  width: 10vw;
+  background: #1a54be;
+  width: 12vw;
   height: 20vh;
   z-index: 2;
   display: none;
