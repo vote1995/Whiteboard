@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+  overflow: hidden;
+}
+.frame {
+    display: grid;
+    background: red;
+    grid-template-columns: auto 2fr;  /* เพิ่ม 1fr ด้านหน้าและด้านหลังเพื่อให้ grid ซ้ายและ grid ขวาเท่ากัน */
+    grid-auto-rows: 100vh;
+    grid-template-areas: 
+      "left right right right";
+  }
+  
+  .leftframe {
+    width: 50px;
+    grid-area: left;
+    background: green;
+  }
+  .leftframe ul li{
+    width: 20px;
+    height: 50px;
+    margin: 12px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    list-style: none;
+  }
+  .leftframe button {
+    border: none;
+    border-radius: none;
+    font-size:25px;
+  }
+
+
+  .rightframe {
+    grid-area: right;
+    background: blue;
+  }
+.rightframe button {
+  border: none;
+  border-radius: none;
+  align-items: center;
+  font-size:25px;
+}
+.box-shapes ul li {
+  margin: 5px auto;
+  padding: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  list-style: none;
+}
+
+.col-a {
+  margin: 10px auto;
+}
+.col-a li{
+  left: 7%;
+  top: 5%;
+  margin: 10px;
+  padding: 10px auto;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  list-style: none;
+}
+.col-b {
+  margin: 10%  auto;
+}
+.col-b li {
+  left: 7%;
+  top: 5%;
+  margin: 10px;
+  padding: 15px auto;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  list-style: none;
+}
+#Mcanvas {
+  background: #fff;
+  /* border: 1px solid #000000; */
+} 
+
+/* -------------- button design ------------------- */
+
+.btn-pen {
+  cursor: pointer;
+  padding: 15px;
+}
+.btn-eraser {
+  cursor: pointer;
+  padding: 15px;
+}
+.btn-highlight {
+  cursor: pointer;
+  padding: 15px;
+}
+.btn-shapes {
+  cursor: pointer;
+  padding: 15px;
+}
+.btn-square {
+  cursor: pointer;
+  padding: 16.5px;
+}
+.btn-triangle {
+  cursor: pointer;
+  padding: 15px;
+}
+.btn-circle {
+  cursor: pointer;
+  padding: 15px;
+}
+/* col buttom -------------------------------*/
+.col-black {
+  background: black;
+  cursor: pointer;
+  padding: 15px;
+}
+.col-red {
+  background: red;
+  cursor: pointer;
+  padding: 15px;
+}
+.col-blue {
+  background: blue;
+  cursor: pointer;
+  padding: 15px;
+}
+.col-green {
+  background: green;
+  cursor: pointer;
+  padding: 15px;
+}
+/* col-b ---------------------------------- */
+.col-white {
+  background: white;
+  cursor: pointer;
+  padding: 15px;
+}
+.col-orange {
+  background: orange;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.col-yellow {
+  background: yellow;
+  cursor: pointer;
+  padding: 15px;
+}
+.col-pink {
+  background: pink;
+  cursor: pointer;
+  padding: 15px;
+}
+
+/* --------------------- end ------------------- */
+
+/* ---------------- overlay ------------------- */
+.rightframe {
+  position: relative;
+}
+
+.rightframe #Mcanvas, .box-shapes {
+  position: absolute;
+} 
+.box-shapes {
+  display: none;
+  position: absolute;
+  top: 23%; 
+  left: 2%; 
+  width: 2.5vw;
+  z-index: 1;
+  height: 30%;
+  background: #333;
+  transform: scale(0);
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.box-col {
+  top: 25%;
+  left: 5.8%;
+  position: absolute;
+  background: #b8b8b8;
+  width: 10vw;
+  height: 20vh;
+  z-index: 2;
+  display: none;
+  transform: translate(-50%, -50%);
+}
+
+.box-pen {
+  top: 13%;
+  left: 5.8%;
+  position: absolute;
+  background: #5a5a5a;
+  width: 10vw;
+  height: 20vh;
+  z-index: 2;
+  display: none;
+  transform: translate(-50%, -50%);
+}
+
+#col-more {
+  width: 70%;
+  height: 20%;
+  margin: 10px 13%;
+  left: 30%;
+}
+/* --------------------- end ------------------- */
+
+.box-shapes.active {
+  transform: scale(1);
+}
+
+
+@media screen and (max-width: 1024px)
+{
+  .box-shapes {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 2.5%;
+  }
+}
+
+@media screen and (max-width: 1031px) 
+{
+  .box-shapes {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+   width: 2.5%;
+  }
+}
+@media screen and (max-width:992px) {
+  .box-shapes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 2.5%;
+  }
+}
