@@ -28,7 +28,7 @@
                     <button class="btn-shapes"><i class="fa-solid fa-shapes"></i></button>
                  </li>
                  <li>
-                    <button class="btn-clear" onclick="Fclear()"><img src="image/clean.png"></i></button>
+                    <button class="btn-clear" onclick="Fclear()"><i class="fa-solid fa-brush"></i></button>
                  </li>
                  <li>
                     <button class="btn-color"><i class="fa-solid fa-droplet"></i></button>
@@ -49,16 +49,16 @@
             </div>
             <div class="box-col">
                 <ui class="col-a">
-                    <li><button class="col-black"></button></li>
-                    <li><button class="col-red"></button></li>
-                    <li><button class="col-blue"></button></li>
-                    <li><button class="col-green"></button></li>
+                    <li><button class="col-black" onclick="chBlack()"></button></li>
+                    <li><button class="col-red" onclick="chRed()"></button></li>
+                    <li><button class="col-blue" onclick="chBlue()"></button></li>
+                    <li><button class="col-green" onclick="chGreen()"></button></li>
                 </ui>
                 <ul class="col-b">
-                    <li><button class="col-white"></button></li>
-                    <li><button class="col-orange"></button></li>
-                    <li><button class="col-yellow"></button></li>
-                    <li><button class="col-pink"></button></li>
+                    <li><button class="col-white" onclick="chWhite()"></button></li>
+                    <li><button class="col-orange"onclick="chOrange()"></button></li>
+                    <li><button class="col-yellow" onclick="chYellow()"></button></li>
+                    <li><button class="col-pink" onclick="chPink()"></button></li>
                 </ul>
                 <input type="color" id="col-more">
             </div>
@@ -68,10 +68,6 @@
             
         </div>
     </div>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-        var socket = io();
-    </script>
     <script src="script-main.js"></script>
 </body>
 </html>
