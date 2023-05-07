@@ -12,6 +12,7 @@ body {
 }
 .frame {
     display: grid;
+    width: 100%;
     grid-template-columns: auto 2fr;  /* เพิ่ม 1fr ด้านหน้าและด้านหลังเพื่อให้ grid ซ้ายและ grid ขวาเท่ากัน */
     grid-auto-rows: 100vh;
     grid-template-areas: 
@@ -43,6 +44,7 @@ body {
 
   .rightframe {
     overflow: hidden;
+    height: 100%;
     grid-area: right;
     background: blue;
   }
@@ -428,7 +430,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1031px) 
+@media screen and (max-width: 480px) 
 {
   .box-shapes {
     display: flex;
@@ -446,53 +448,6 @@ body {
     height: 30%;
     display: flex;
     left: 14%;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-  }
-}
-@media screen and (max-width:800px) {
-  .box-shapes {
-    border-radius: 4px;
-    width: 2%;
-    display: flex;
-    height: 22%;
-    padding: 1.8%;
-    left: 4%;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-  }
-  .box-col {
-    top: 50%;
-    width: 33%;
-    height: 22%;
-    display: flex;
-    left: 18%;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-  }
-}
-
-@media screen and (max-width: 725px) {
-  .box-shapes {
-    display: flex;
-    padding: 1.8%;
-    left: 6%;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-  }
-  .box-col {
-    top: 50%;
-    width: 36%;
-    height: 25%;
-    display: flex;
-    left: 20%;
     position: absolute;
     align-items: center;
     justify-content: center;
