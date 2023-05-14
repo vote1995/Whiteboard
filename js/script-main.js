@@ -225,15 +225,6 @@ function chPink() {
 }
 
 
-
-
-
-
-
-
-
-
-
 // action sidebar----------------------------------------------------------------
 
 const btnshapes = document.querySelector('.btn-shapes');

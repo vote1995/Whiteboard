@@ -8,9 +8,11 @@ body {
 
 :root {
   --bg-btn: #020c2c;
+  --bg-bar: #1c49db;
 }
 .frame {
     display: grid;
+    width: 100%;
     grid-template-columns: auto 2fr;  /* เพิ่ม 1fr ด้านหน้าและด้านหลังเพื่อให้ grid ซ้ายและ grid ขวาเท่ากัน */
     grid-auto-rows: 100vh;
     grid-template-areas: 
@@ -21,7 +23,7 @@ body {
     width: 100%; /* 50px/9 */
     height: 100%;
     grid-area: left;
-    background: #1348bb;
+    background: var(--bg-bar);
     overflow: hidden;
   }
   .leftframe ul li{
@@ -42,6 +44,7 @@ body {
 
   .rightframe {
     overflow: hidden;
+    height: 100%;
     grid-area: right;
     background: blue;
   }
@@ -349,29 +352,30 @@ body {
   position: absolute;
 } 
 .box-shapes {
-  display: none;
   position: absolute;
   top: 23%; 
   left: 2%; 
   width: 3vw;
   z-index: 1;
   height: 30%;
-  background: #09205f;
+  background: var(--bg-bar);
   transform: scale(0);
   transform: translate(-50%, -50%);
   display: none;
+  border-radius: 4px;
 }
 
 .box-col {
   top: 25%;
   left: 7%;
   position: absolute;
-  background: #1a54be;
+  background: var(--bg-bar);
   width: 12vw;
   height: 20vh;
   z-index: 2;
   display: none;
   transform: translate(-50%, -50%);
+  border-radius: 4px;
 }
 
 .box-pen {
@@ -384,6 +388,7 @@ body {
   z-index: 2;
   display: none;
   transform: translate(-50%, -50%);
+  border-radius: 4px;
 }
 
 #col-more {
@@ -403,11 +408,13 @@ body {
 {
   .box-shapes {
     display: flex;
-    padding: 1.8%;
+    
+    padding: 1.4%;
     left: 4%;
     position: absolute;
     align-items: center;
     justify-content: center;
+    border-radius: 4px;
   }
 
   .box-col {
@@ -419,18 +426,21 @@ body {
     position: absolute;
     align-items: center;
     justify-content: center;
+    border-radius: 4px;
   }
 }
 
-@media screen and (max-width: 1031px) 
+@media screen and (max-width: 480px) 
 {
   .box-shapes {
     display: flex;
+    width: 2%;
     padding: 1.8%;
     left: 4%;
     position: absolute;
     align-items: center;
     justify-content: center;
+    border-radius: 4px;
   }
   .box-col {
     top: 50%;
@@ -441,27 +451,6 @@ body {
     position: absolute;
     align-items: center;
     justify-content: center;
+    border-radius: 4px;
   }
 }
-@media screen and (max-width:992px) {
-  .box-shapes {
-    display: flex;
-    padding: 1.8%;
-    left: 4%;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-  }
-  .box-col {
-    top: 50%;
-    width: 25%;
-    height: 30%;
-    display: flex;
-    left: 14%;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    color: rgb(226, 155, 220);
-  }
-}
-
